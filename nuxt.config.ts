@@ -4,6 +4,8 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  srcDir: 'app',
+
   css: ['~/assets/css/main.css'],
 
   app: {
@@ -35,7 +37,8 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     lazy: true,
-    langDir: '.',
+    restructureDir: 'app',
+    langDir: 'i18n',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
     compilation: {
