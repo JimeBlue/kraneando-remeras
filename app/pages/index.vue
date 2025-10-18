@@ -3,21 +3,21 @@
     <section class="space-y-6 text-center">
       <div class="mx-auto flex max-w-3xl flex-col gap-4">
         <UBadge variant="solid" color="primary" size="lg" class="self-center">
-          Nuxt 4 · Tailwind 4 · Nuxt UI 4
+          {{ t('home.badge') }}
         </UBadge>
         <h1 class="text-4xl font-heading font-semibold tracking-tight text-blue-900 md:text-5xl">
-          Starter SSR boilerplate ready for your next project
+          {{ t('home.hero.title') }}
         </h1>
         <p class="text-lg text-slate-500 md:text-xl">
-          This template ships with an opinionated setup using the latest Nuxt, Tailwind CSS, and Nuxt UI so you can focus on building features.
+          {{ t('home.hero.subtitle') }}
         </p>
       </div>
       <div class="flex flex-wrap items-center justify-center gap-4">
         <UButton to="https://nuxt.com" target="_blank" color="primary">
-          Explore Nuxt 4 Docs
+          {{ t('home.hero.primaryCta') }}
         </UButton>
         <UButton to="https://tailwindcss.com" target="_blank" variant="outline">
-          Tailwind CSS Docs
+          {{ t('home.hero.secondaryCta') }}
         </UButton>
       </div>
     </section>
@@ -40,22 +40,25 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const features = [
+<script setup>
+
+const { t } = useI18n()
+
+const features = computed(() => [
   {
-    title: 'Server-rendered out of the box',
-    description: 'SSR mode is enabled so you get SEO benefits immediately without extra configuration.',
+    title: t('home.features.ssr.title'),
+    description: t('home.features.ssr.description'),
     icon: 'i-carbon:cloud-alerting',
   },
   {
-    title: 'Tailwind CSS 4',
-    description: 'The brand-new Tailwind pipeline is pre-configured via @tailwindcss/postcss.',
+    title: t('home.features.tailwind.title'),
+    description: t('home.features.tailwind.description'),
     icon: 'i-carbon:build-tool',
   },
   {
-    title: 'Nuxt UI 4',
-    description: 'Leverage the latest Nuxt UI components, theming, and design tokens globally.',
+    title: t('home.features.nuxtUi.title'),
+    description: t('home.features.nuxtUi.description'),
     icon: 'i-carbon:palette',
   },
-] as const
+])
 </script>

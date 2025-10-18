@@ -1,3 +1,44 @@
 {
-  "welcome": "Welcome to Starter Basic"
+  "welcome": "Welcome to Starter Basic",
+  "buttons": {
+    "skip_content": "Skip to content"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "Nuxt 4 · Tailwind 4 · Nuxt UI 4",
+    "hero": {
+      "title": "Starter SSR boilerplate ready for your next project",
+      "subtitle": "This template ships with an opinionated setup using the latest Nuxt, Tailwind CSS, and Nuxt UI so you can focus on building features.",
+      "primaryCta": "Explore Nuxt 4 Docs",
+      "secondaryCta": "Tailwind CSS Docs"
+    },
+    "features": {
+      "ssr": {
+        "title": "Server-rendered out of the box",
+        "description": "SSR mode is enabled so you get SEO benefits immediately without extra configuration."
+      },
+      "tailwind": {
+        "title": "Tailwind CSS 4",
+        "description": "The brand-new Tailwind pipeline is pre-configured via at-tailwindcss/postcss."
+      },
+      "nuxtUi": {
+        "title": "Nuxt UI 4",
+        "description": "Leverage the latest Nuxt UI components, theming, and design tokens globally."
+      }
+    }
+  },
+  "about": {
+    "title": "About Starter Basic",
+    "intro": "Starter Basic is a lightweight Nuxt 4 boilerplate configured with Tailwind CSS 4 and Nuxt UI 4, giving you an SSR-first foundation for projects that need excellent performance and SEO.",
+    "details": "Extend this template by adding your own modules, design system tokens, or advanced routing as needed."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Replace this page with your preferred contact form or CRM integration.",
+    "alert": "Need a quick start? Hook this page up to your form provider and start collecting submissions."
+  }
 }

@@ -27,6 +27,7 @@ body {
 }
 
 @theme {
+  --color-primary: #8354d3;
   --color-primary-50: #f5f1fb;
   --color-primary-100: #ebe3f8;
   --color-primary-200: #d7c8f1;
