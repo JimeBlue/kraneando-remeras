@@ -5,7 +5,7 @@
         <UBadge variant="solid" color="primary" size="lg" class="self-center">
           Nuxt 4 · Tailwind 4 · Nuxt UI 4
         </UBadge>
-        <h1 class="text-4xl font-heading font-semibold tracking-tight text-slate-900 md:text-5xl">
+        <h1 class="text-4xl font-heading font-semibold tracking-tight text-blue-900 md:text-5xl">
           Starter SSR boilerplate ready for your next project
         </h1>
         <p class="text-lg text-slate-500 md:text-xl">

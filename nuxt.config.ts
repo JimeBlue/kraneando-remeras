@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   srcDir: 'app',
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/fonts.css'],
 
   app: {
     head: {
