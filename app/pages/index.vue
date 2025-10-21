@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-10">
+  <div class="space-y-10 container">
     <section class="space-y-6 text-center">
       <div class="mx-auto flex max-w-3xl flex-col gap-4">
         <UBadge variant="solid" color="primary" size="lg" class="self-center">

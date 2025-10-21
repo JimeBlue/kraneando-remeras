@@ -22,7 +22,7 @@
           </ul>
         </nav>
 
-        <div class="ml-auto flex items-center gap-x-2 lg:ml-4">
+        <div class="ml-auto flex items-center gap-x-2 lg:ml-4 ">
           <UDropdownMenu :items="localeItems" :popper="{ placement: 'bottom-start' }" :ui="{
               content: 'bg-primary/70 border-none shadow-none p-0 text-white',
               item: 'text-white before:bg-transparent data-[state=open]:before:bg-transparent data-highlighted:before:bg-transparent data-highlighted:text-primary-500',

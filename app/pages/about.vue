@@ -1,5 +1,5 @@
 <template>
-  <section class="space-y-4">
+  <section class="space-y-4 container">
     <h1 class="text-3xl font-heading font-semibold text-slate-900">
       {{ t('about.title') }}
     </h1>
