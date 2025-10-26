@@ -8,6 +8,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/tailwind.css', '~/assets/css/fonts.css'],
 
+    ui: {
+    colorMode: false,
+  },
+
   app: {
     head: {
       title: 'starter-basic',
@@ -20,11 +24,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@nuxtjs/i18n', '@vueuse/nuxt', 'nuxt-svgo'],
+  modules: ['@nuxt/ui', '@nuxtjs/i18n', '@vueuse/nuxt', 'nuxt-svgo', '@vueuse/motion/nuxt',],
 
   ui: {
     global: true,
   },
+
+  
 
   i18n: {
     locales: [

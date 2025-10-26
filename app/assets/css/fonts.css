@@ -1,53 +1,54 @@
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Gulfs ExtraExpanded';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/GulfsDisplay-ExtraExpanded.woff2') format('woff2'),
+    url('/fonts/GulfsDisplay-ExtraExpanded.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 300;
   src:
-    url('/fonts/OpenSans-Light.woff2') format('woff2'),
-    url('/fonts/OpenSans-Light.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url('/fonts/OpenSans-Regular.woff2') format('woff2'),
-    url('/fonts/OpenSans-Regular.woff') format('woff');
+    url('/fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+    url('/fonts/SpaceGrotesk-Light.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+    url('/fonts/SpaceGrotesk-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+    url('/fonts/SpaceGrotesk-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 600;
   src:
-    url('/fonts/OpenSans-SemiBold.woff2') format('woff2'),
-    url('/fonts/OpenSans-SemiBold.woff') format('woff');
+    url('/fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+    url('/fonts/SpaceGrotesk-SemiBold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
   src:
-    url('/fonts/OpenSans-Bold.woff2') format('woff2'),
-    url('/fonts/OpenSans-Bold.woff') format('woff');
+    url('/fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+    url('/fonts/SpaceGrotesk-Bold.woff') format('woff');
 }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src:
-    url('/fonts/OpenSans-Italic.woff2') format('woff2'),
-    url('/fonts/OpenSans-Italic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src:
-    url('/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
-    url('/fonts/OpenSans-BoldItalic.woff') format('woff');
-}
-
