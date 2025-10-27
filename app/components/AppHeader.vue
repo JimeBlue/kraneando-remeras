@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 z-40 flex w-full flex-col justify-center bg-white">
+  <header class="fixed top-0 z-40 flex w-full flex-col justify-center bg-primary-500">
     <UButton to="#main-content" class="pointer-events-none absolute z-100 opacity-0 focus:opacity-100">
       {{ t('buttons.skip_content') }}
     </UButton>

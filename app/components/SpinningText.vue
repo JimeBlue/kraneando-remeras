@@ -6,7 +6,7 @@
 
       <!-- Center logo -->
       <div class="center-logo">
-        <img src="/images/logo-kraneando-transparent.png" alt="Logo" class="w-16 h-16" />
+        <img src="/images/logo-kraneando-transparent.png" alt="Logo" class="w-8 h-8 lg:w-16 lg:h-16" />
       </div>
 
       <!-- Spinning text -->
@@ -75,12 +75,19 @@ const letters = computed(() => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   background-color: black;
   border: 2px solid white;
   border-radius: 50%;
   z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .spinning-background {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .center-logo {
