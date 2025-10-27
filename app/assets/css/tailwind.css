@@ -61,7 +61,7 @@ body {
   --text-xxs--line-height: calc(1 / 0.625);
 
   /* Font Families */
-  --font-body: 'Gulfs ExtraExpanded', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Space Grotesk', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   --font-headline: 'Gulfs ExtraExpanded', Arial, sans-serif;
 
   --radius: 0.625rem;
