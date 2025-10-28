@@ -147,60 +147,30 @@ body {
     width: 100%;
     height: auto;
     pointer-events: none;
+    animation: remeraSwap 3s ease-in-out infinite;
+    animation-delay: var(--animation-delay, 0s);
   }
 
-  .hero-remera__image--primary {
-    animation: remeraSwapPrimary 3s ease-in-out infinite;
+  .hero-remera__image--base {
+    position: relative;
   }
 
-  .hero-remera__image--secondary {
+  .hero-remera__image--stacked {
     position: absolute;
     inset: 0;
-    animation: remeraSwapSecondary 3s ease-in-out infinite;
-  }
-
-  .hero-remera__image--tertiary {
-    position: absolute;
-    inset: 0;
-    animation: remeraSwapTertiary 3s ease-in-out infinite;
   }
 
 }
 
-@keyframes remeraSwapPrimary {
-  0%,
-  30% {
+@keyframes remeraSwap {
+  0% {
     opacity: 1;
   }
-  33%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes remeraSwapSecondary {
-  0%,
-  33% {
-    opacity: 0;
-  }
-  36%,
-  66% {
+  33.33% {
     opacity: 1;
   }
-  69%,
-  100% {
+  33.34% {
     opacity: 0;
-  }
-}
-
-@keyframes remeraSwapTertiary {
-  0%,
-  69% {
-    opacity: 0;
-  }
-  72%,
-  97% {
-    opacity: 1;
   }
   100% {
     opacity: 0;

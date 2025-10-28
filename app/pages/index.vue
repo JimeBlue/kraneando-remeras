@@ -17,13 +17,19 @@
         <SpinningBadge
           class="absolute -top-12 right-[6%] min-[500px]:right-[16vw] sm:right-[16%] lg:-bottom-4 lg:top-auto lg:right-[1vw] 2xl:-right-40" />
       </div>
-      <div class="hero-remera">
-        <img src="/images/remera-lista-azul.png" alt="Remera color azul"
-          class="hero-remera__image hero-remera__image--primary" />
-        <img src="/images/remera-lista-negra.png" alt="Remera color negra"
-          class="hero-remera__image hero-remera__image--secondary" />
-        <img src="/images/remera-lista-blanca.png" alt="Remera color blanca"
-          class="hero-remera__image hero-remera__image--tertiary" />
+      <div class="hero-remera md:-mt-4">
+        <img 
+          v-for="(image, index) in tshirtImages" 
+          :key="image.id"
+          :src="image.src" 
+          :alt="image.alt"
+          class="hero-remera__image"
+          :style="{ 
+            '--animation-delay': `${index * animationStaggerDelay}s`,
+            '--total-images': tshirtImages.length
+          }"
+          :class="index === 0 ? 'hero-remera__image--base' : 'hero-remera__image--stacked'"
+        />
       </div>
     </div>
   </section>
@@ -33,4 +39,25 @@
 import SpinningBadgeTest from '~/components/SpinningBadge.vue'
 
 const { t } = useI18n()
+
+const tshirtImages = ref([
+  {
+    id: 1,
+    src: '/images/remera-lista-azul.png',
+    alt: 'Remera color azul'
+  },
+  {
+    id: 2,
+    src: '/images/remera-lista-negra.png',
+    alt: 'Remera color negra'
+  },
+  {
+    id: 3,
+    src: '/images/remera-lista-blanca.png',
+    alt: 'Remera color blanca'
+  }
+])
+
+const animationDuration = 3
+const animationStaggerDelay = animationDuration / tshirtImages.value.length
 </script>
