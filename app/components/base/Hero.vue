@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="bg-primary-500 py-16">
     <div class="container">
       <div class="relative">
         <h1 class="flex flex-col font-headline uppercase tracking-[8px] text-center text-[clamp(9vw,10vw,8vw)]">
@@ -56,6 +56,7 @@ const tshirtImages = ref([
     src: '/images/remera-lista-blanca.png',
     alt: 'Remera color blanca'
   }
+  
 ])
 
 const animationDuration = 3

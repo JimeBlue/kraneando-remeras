@@ -1,13 +1,13 @@
 <template>
-  <header class="fixed top-0 z-40 flex w-full flex-col justify-center bg-primary-500">
-    <UButton to="#main-content" class="pointer-events-none absolute z-100 opacity-0 focus:opacity-100">
-      {{ t('buttons.skip_content') }}
-    </UButton>
+  <header class="z-40 flex w-full flex-col justify-center bg-primary-500">
+
 
     <div class="container relative flex h-20 items-center">
       <div class="flex flex-1 items-center gap-x-6 lg:justify-between lg:gap-x-1">
         <NuxtLink :to="localePath(root)" :aria-label="t('navigation.home')">
-          <Logo class="mx-auto h-[38px]" />
+          <picture class="mx-auto flex size-10 items-center justify-center rounded-full border-2 border-white bg-black">
+            <img src="/images/logo-kraneando-transparent.png" alt="Kraneando logo" class="size-8 object-contain" />
+          </picture>
         </NuxtLink>
 
 
@@ -15,7 +15,7 @@
           <ul class="flex flex-wrap gap-x-4 xl:gap-x-6">
             <li v-for="{ to, label } in pages" :key="to">
               <NuxtLink :to="localePath(to)"
-                class="aria-[current=page]:text-primary-500 hover:border-current text-base border-b border-white aria-[current=page]:border-primary">
+                class="aria-[current=page]:text-red-500 hover:border-current text-base border-b border-transparent aria-[current=page]:border-red-500">
                 {{ label }}
               </NuxtLink>
             </li>
