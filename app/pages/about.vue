@@ -25,8 +25,12 @@
           v-motion
           :initial="{ opacity: 0, y: 50 }"
           :visible="{ opacity: 1, y: 0, transition: { delay: 600 } }"
-          class="text-base text-slate-500"
+          class="text-9xl text-slate-500"
         >
+          {{ t('about.details') }}
+          {{ t('about.details') }}
+          {{ t('about.details') }}
+          {{ t('about.details') }}
           {{ t('about.details') }}
         </p>
       </article>

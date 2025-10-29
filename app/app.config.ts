@@ -59,6 +59,6 @@ export default defineAppConfig({
         description: 'mt-2 text-base text-pretty',
       },
     },
-
+  
   },
 })

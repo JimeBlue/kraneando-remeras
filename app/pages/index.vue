@@ -4,24 +4,25 @@
     <div class="container">
       <h2 class="text-3xl font-bold text-center mb-12">productos</h2>
 
-      <UCarousel v-slot="{ item }" :items="productCategories" :ui="{
-          item: 'basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4',
+      <UCarousel v-slot="{ item }" :items="productCategories" :arrows="isMdAndUp"
+        :prev="{ size: 'xl', variant: 'solid', class: 'bg-red-500 text-white border-red-500 hover:bg-red-600 focus-visible:ring-red-500' }"
+        :next="{ size: 'xl', variant: 'solid', class: 'bg-red-500 text-white border-red-500 hover:bg-red-600 focus-visible:ring-red-500' }"
+        prev-icon="streamline-emojis:backhand-index-pointing-left-2"
+        next-icon="streamline-emojis:backhand-index-pointing-right-2" 
+        :ui="{
+          item: 'basis-[70%] md:basis-[42%] lg:basis-[30%]',
           container: 'flex items-center rounded-lg',
-          arrows: {
-            wrapper: 'absolute inset-0 flex items-center justify-between z-20 pointer-events-none px-4',
-            base: 'pointer-events-auto rounded-full bg-primary-500 hover:bg-primary-600 text-red-500 shadow-lg border p-2',
-            prev: 'left-2',
-            next: 'right-2'
-          }
-        }" arrows indicators class="rounded-lg overflow-hidden relative">
+        }">
         <div class="p-2">
-          <UCard class="overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-white">
+          <UCard  
+          :ui="{ root: 'ring-2' }"
+          class="overflow-hidden bg-white rounded-4xl">
             <div class="aspect-square overflow-hidden">
               <img :src="item.image" :alt="item.title"
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-lg" />
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-4xl" />
             </div>
-            <div >
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ item.title }}</h3>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 rounded-4xl">{{ item.title }}</h3>
               <p class="text-gray-700 text-sm">{{ item.description }}</p>
             </div>
           </UCard>
@@ -32,6 +33,10 @@
 </template>
 
 <script setup>
+const isMdAndUp = useMediaQuery('(min-width: 768px)', {
+  ssrWidth: 320 // Mobile-first SSR approach
+})
+
 const productCategories = [
   {
     title: 'Sweatshirts',
