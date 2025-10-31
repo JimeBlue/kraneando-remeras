@@ -137,44 +137,6 @@ body {
       -3px 3px 0 #000,
       6px 6px 0 #000;
   }
-
-  .hero-remera {
-    position: relative;
-    width: min(80vw, 720px);
-    margin-inline: auto;
-  }
-
-  .hero-remera__image {
-    display: block;
-    width: 100%;
-    height: auto;
-    pointer-events: none;
-    animation: remeraSwap 3s ease-in-out infinite;
-    animation-delay: var(--animation-delay, 0s);
-  }
-
-  .hero-remera__image--base {
-    position: relative;
-  }
-
-  .hero-remera__image--stacked {
-    position: absolute;
-    inset: 0;
-  }
-
 }
 
-@keyframes remeraSwap {
-  0% {
-    opacity: 1;
-  }
-  33.33% {
-    opacity: 1;
-  }
-  33.34% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
