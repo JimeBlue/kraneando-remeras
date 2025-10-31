@@ -17,18 +17,12 @@
         <SpinningBadge
           class="absolute -top-12 right-[6%] min-[500px]:right-[16vw] sm:right-[16%] lg:-bottom-4 lg:top-auto lg:right-[1vw] 2xl:-right-40" />
       </div>
-      <div class="relative w-full h-[600px] flex items-center justify-center">
-        <img 
-          :src="currentShirt.src" 
-          :alt="currentShirt.alt"
-          loading="eager"
-          class="max-w-full max-h-full object-contain"
-          v-motion
-          :key="currentShirt.id"
-          :initial="{ display: 'none' }"
+      <div
+        class="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px] flex items-start justify-center">
+        <img :src="currentShirt.src" :alt="currentShirt.alt" loading="eager"
+          class="max-w-full max-h-full object-contain" v-motion :key="currentShirt.id" :initial="{ display: 'none' }"
           :enter="{ display: 'block', transition: { duration: 500, ease: 'easeOut' } }"
-          @error="console.error('Failed to load:', currentShirt.src)"
-        />
+          @error="console.error('Failed to load:', currentShirt.src)" />
       </div>
     </div>
   </section>
@@ -41,8 +35,9 @@ const { t } = useI18n()
 
 const tShirts = [
   { id: 1, src: '/images/remera-lista-azul.png', alt: 'Remera color azul' },
-  { id: 2, src: '/images/remera-lista-negra.png', alt: 'Remera color negra' },
-  { id: 3, src: '/images/remera-lista-blanca.png', alt: 'Remera color blanca' }
+  { id: 3, src: '/images/remera-lista-blanca.png', alt: 'Remera color blanca' },
+  { id: 2, src: '/images/black-t-shirt.png', alt: 'Remera negra' },
+
 ]
 
 const currentShirtIndex = ref(0)
