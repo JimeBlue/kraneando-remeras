@@ -1,5 +1,5 @@
 <template>
-  <header class="z-40 flex w-full flex-col justify-center bg-primary-500">
+  <header class="z-40 flex w-full flex-col justify-center bg-white">
 
 
     <div class="container relative flex h-20 items-center">
@@ -12,10 +12,10 @@
 
 
         <nav v-if="pages.length > 1" class="hidden lg:block">
-          <ul class="flex flex-wrap gap-x-4 xl:gap-x-6">
+          <ul class="flex flex-wrap items-center gap-x-4 xl:gap-x-6">
             <li v-for="{ to, label } in pages" :key="to">
               <NuxtLink :to="localePath(to)"
-                class="aria-[current=page]:text-red-500 hover:border-current text-base border-b border-transparent aria-[current=page]:border-red-500">
+                class="border-b border-transparent text-base text-black transition hover:border-current aria-[current=page]:border-red-500 aria-[current=page]:text-red-500">
                 {{ label }}
               </NuxtLink>
             </li>
@@ -91,9 +91,6 @@ import Logo from '~/assets/svg/brain.svg?component'
 const root = '/'
 
 const { t } = useI18n()
-
-
-
 const localePath = useLocalePath()
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -103,8 +100,9 @@ const menuOpen = ref(false)
 
 const pages = computed(() => ([
   { label: t('navigation.home'), to: '/' },
+  { label: 'Remeras', to: '/products' },
   { label: t('navigation.about'), to: '/about' },
-  { label: t('navigation.contact'), to: '/contact' },
+  { label: t('navigation.contact'), to: '/contact' }
 ]).filter(Boolean))
 
 const visibleLocales = ['en', 'de']

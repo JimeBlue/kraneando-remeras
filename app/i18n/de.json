@@ -6,7 +6,13 @@
   "navigation": {
     "home": "Startseite",
     "about": "Über uns",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "products": {
+      "label": "Produkte",
+      "tshirts": "T-Shirts",
+      "sweatshirts": "Sweatshirts",
+      "accessories": "Accessoires"
+    }
   },
   "home": {
     "badge": "Nuxt 4 · Tailwind 4 · Nuxt UI 4",

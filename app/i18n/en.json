@@ -6,7 +6,13 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "products": {
+      "label": "Products",
+      "tshirts": "Remeras",
+      "sweatshirts": "Sweatshirts",
+      "accessories": "Accessories"
+    }
   },
   "home": {
     "badge": "Nuxt 4 · Tailwind 4 · Nuxt UI 4",
