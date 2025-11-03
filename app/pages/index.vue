@@ -1,5 +1,6 @@
 <template>
   <BaseHero />
+
   <section class="py-16">
     <div class="container">
       <h2 class="text-3xl font-bold text-center mb-12">productos</h2>

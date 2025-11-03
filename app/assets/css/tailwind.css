@@ -12,8 +12,17 @@ body {
 }
 
   button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
+  [role="button"]:not(:disabled),
+  a:not(:disabled),
+  .nuxt-link-exact-active,
+  .nuxt-link-active,
+  .router-link-exact-active,
+  .router-link-active,
+  [role="link"]:not(:disabled),
+  input[type="submit"]:not(:disabled),
+  input[type="button"]:not(:disabled),
+  label[for]:not(:disabled) {
+    cursor: url("/images/rock_32x32.png") 8 8, pointer;
   }
 }
 
@@ -136,6 +145,14 @@ body {
       3px 3px 0 #000,
       -3px 3px 0 #000,
       6px 6px 0 #000;
+  }
+
+  .cursor-rock {
+    cursor: url("/images/rock_32x32.png") 8 8, pointer;
+  }
+
+  .cursor-rock-large {
+    cursor: url("/images/rock_32x32.png") 8 8, pointer;
   }
 }
 
