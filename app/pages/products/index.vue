@@ -10,11 +10,16 @@
       Error loading products: {{ error }}
     </div>
 
-    <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div v-else class="grid grid-cols-1 md:grid-cols-4 gap-1">
       <div v-for="product in products" :key="product._id" class="border rounded-lg p-4 hover:shadow-lg transition">
-        <!-- Product Image -->
-        <img v-if="product.images?.[0]" :src="urlFor(product.images[0]).width(400).url()" :alt="product.title.es"
-          class="w-full h-64 object-cover rounded mb-4" />
+        <!-- Product Image (Clickable for Lightbox) -->
+        <img
+          v-if="product.images?.[0]"
+          :src="urlFor(product.images[0]).width(400).format('png').quality(85).url()"
+          :alt="product.title.es"
+          class="w-full object-contain rounded mb-4 object-top cursor-pointer opacity-90 transition-opacity bg-stone-100"
+          @click="openLightbox(product)"
+        />
 
         <!-- Product Info -->
         <h2 class="text-xl font-bold mb-2">{{ product.title.es }}</h2>
@@ -24,6 +29,16 @@
         <p v-if="product.band" class="text-sm text-gray-500">🎸 {{ product.band }}</p>
       </div>
     </div>
+
+    <!-- Lightbox Component (Client-side only) -->
+    <ClientOnly>
+      <vue-easy-lightbox
+        :visible="lightboxVisible"
+        :imgs="lightboxImages"
+        :index="lightboxIndex"
+        @hide="lightboxVisible = false"
+      />
+    </ClientOnly>
   </div>
 </template>
 
@@ -46,4 +61,23 @@ const { data: products, pending, error } = await useAsyncData('products', async 
     }
   `)
 })
+
+// Lightbox state
+const lightboxVisible = ref(false)
+const lightboxImages = ref<string[]>([])
+const lightboxIndex = ref(0)
+
+// Open lightbox with all product images
+const openLightbox = (product: any) => {
+  if (!product.images || product.images.length === 0) return
+
+  // Transform all product images to high-res PNG URLs for lightbox
+  lightboxImages.value = product.images.map((image: any) =>
+    urlFor(image).width(1500).format('png').quality(90).url()
+  )
+
+  // Start at the first image
+  lightboxIndex.value = 0
+  lightboxVisible.value = true
+}
 </script>
