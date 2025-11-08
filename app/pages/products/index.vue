@@ -13,13 +13,19 @@
     <div v-else class="grid grid-cols-1 md:grid-cols-4 gap-1">
       <div v-for="product in products" :key="product._id" class="border rounded-lg p-4 hover:shadow-lg transition">
         <!-- Product Image (Clickable for Lightbox) -->
-        <img
+        <div
           v-if="product.images?.[0]"
-          :src="urlFor(product.images[0]).width(400).format('png').quality(85).url()"
-          :alt="product.title.es"
-          class="w-full object-contain rounded mb-4 object-top cursor-pointer opacity-90 transition-opacity bg-stone-100"
-          @click="openLightbox(product)"
-        />
+          class="mb-4 flex h-64 w-full items-center justify-center overflow-hidden rounded bg-stone-100"
+          @mouseenter="hoveredProduct = product._id"
+          @mouseleave="hoveredProduct = null"
+        >
+          <img
+            :src="urlFor(getDisplayImage(product)).width(600).quality(95).url()"
+            :alt="product.title.es"
+            class="h-full w-full cursor-pointer object-contain opacity-90 transition-all duration-300"
+            @click="openLightbox(product)"
+          />
+        </div>
 
         <!-- Product Info -->
         <h2 class="text-xl font-bold mb-2">{{ product.title.es }}</h2>
@@ -66,6 +72,19 @@ const { data: products, pending, error } = await useAsyncData('products', async 
 const lightboxVisible = ref(false)
 const lightboxImages = ref<string[]>([])
 const lightboxIndex = ref(0)
+
+// Hover state to track which product is being hovered
+const hoveredProduct = ref<string | null>(null)
+
+// Helper function to get the image to display (first or second based on hover)
+const getDisplayImage = (product: any) => {
+  // If this product is hovered and has a second image, show the second image
+  if (hoveredProduct.value === product._id && product.images?.[1]) {
+    return product.images[1]
+  }
+  // Otherwise show the first image
+  return product.images[0]
+}
 
 // Open lightbox with all product images
 const openLightbox = (product: any) => {
